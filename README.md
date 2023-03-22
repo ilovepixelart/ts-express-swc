@@ -5,4 +5,4 @@
 * typescript 5 strict
 * swc for typescript transpilation
 * eslint-standard
-* jest with ts-node that uses swc
+* jest with ts-node that uses swc + in memory mongodb for testing
