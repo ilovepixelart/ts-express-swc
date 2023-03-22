@@ -4,3 +4,4 @@
 * ts-migrate-mongoose
 * typescript 5 strict
 * eslint-standard
+* jest with ts-node that uses swc
