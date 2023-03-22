@@ -1,7 +1,7 @@
 # Express.js example/boilerplate/starter
 
 * mongoose
-* ts-migrate-mongoose
+* migrations using ts-migrate-mongoose
 * typescript 5 strict
 * swc for typescript transpilation
 * eslint-standard
