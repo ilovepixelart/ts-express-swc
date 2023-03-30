@@ -1,11 +1,15 @@
+/* eslint-disable import/first */
+
 /**
  * Module dependencies.
  */
 
+import dotenv from 'dotenv'
+dotenv.config()
+
 import app from '../app'
 import http from 'http'
 import debug from 'debug'
-import dotenv from 'dotenv'
 
 import MongooseClient from '../clients/MongooseClient'
 import MigrationClient from '../clients/MigrationClient'
@@ -13,7 +17,7 @@ import MigrationClient from '../clients/MigrationClient'
 import type { Server } from 'http'
 import type { HttpError } from 'http-errors'
 
-dotenv.config()
+const log = debug('ts-express-swc:server')
 
 /**
  * Normalize a port into a number, string, or false.
@@ -58,8 +62,6 @@ const onError = (error: HttpError) => {
  */
 
 const onListening = (server: Server) => {
-  const log = debug('ts-express-swc:server')
-
   let bind = 'unknown'
   const addr = server.address()
   if (typeof addr === 'string') {
@@ -96,5 +98,7 @@ const start = async () => {
   server.on('listening', () => onListening(server))
 }
 
-// eslint-disable-next-line @typescript-eslint/no-floating-promises
-start()
+start().catch((err) => {
+  log(err)
+  process.exit(1)
+})
