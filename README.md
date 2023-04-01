@@ -1,4 +1,4 @@
-# Express.js + Typescript 5 + SWC
+# Express.js + TypeScript 5 + SWC
 
 * mongoose
 * migrations using ts-migrate-mongoose
