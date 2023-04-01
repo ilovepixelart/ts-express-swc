@@ -1,4 +1,4 @@
-# Express.js example/boilerplate/starter
+# Express.js + Typescript 5 + SWC
 
 * mongoose
 * migrations using ts-migrate-mongoose
