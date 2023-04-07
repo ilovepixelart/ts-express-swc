@@ -4,6 +4,7 @@ import optionsMongoose from '../options/mongoose'
 
 import type { MongooseError } from 'mongoose'
 
+// In case you using mongoose 6
 // https://mongoosejs.com/docs/guide.html#strictQuery
 mongoose.set('strictQuery', false)
 
