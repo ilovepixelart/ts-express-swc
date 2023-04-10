@@ -1,6 +1,6 @@
 # Express.js + TypeScript 5 + SWC
 
-* [express](https://expressjs.com/) - or web server
+* [express](https://expressjs.com/) - fast, unopinionated, minimalist web framework for node
 * [mongoose](https://mongoosejs.com/) - mongodb object modeling
 * [ts-migrate-mongoose](https://github.com/ilovepixelart/ts-migrate-mongoose) - mongoose migration framework
 * [ts-patch-mongoose](https://github.com/ilovepixelart/ts-migrate-mongoose) - mongoose patch history & events
