@@ -10,7 +10,7 @@ export async function up () {
       role: 'user'
     },
     {
-      name: 'Jane',
+      name: 'Alice',
       role: 'user'
     }
   ])
