@@ -1,9 +1,11 @@
 # Express.js + TypeScript 5 + SWC
 
-* mongoose
-* migrations using ts-migrate-mongoose
-* typescript 5 strict
-* swc for typescript transpilation
+* [express](https://expressjs.com/) - or web server
+* [mongoose](https://mongoosejs.com/) - mongodb object modeling
+* [ts-migrate-mongoose](https://github.com/ilovepixelart/ts-migrate-mongoose) - mongoose migration framework
+* [ts-patch-mongoose](https://github.com/ilovepixelart/ts-migrate-mongoose) - mongoose patch history & events
+* [typescript 5](https://www.typescriptlang.org/)
+* [swc](https://swc.rs/) for typescript transpilation
 * eslint-standard
 * jest with ts-node that uses swc + in memory mongodb for testing
 

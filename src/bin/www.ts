@@ -17,6 +17,8 @@ import MigrationClient from '../clients/MigrationClient'
 import type { Server } from 'http'
 import type { HttpError } from 'http-errors'
 
+import '../handlers/UserHandler'
+
 const log = debug('ts-express-swc:server')
 
 /**

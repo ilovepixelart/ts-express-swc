@@ -1,24 +1,24 @@
 import getModels from '../src/models'
 
 export async function up () {
+  console.log('Migration - up')
   const { User } = await getModels()
   // Write migration here
   const created = await User.create([
     {
-      firstName: 'John',
-      lastName: 'Doe'
+      name: 'John',
+      role: 'user'
     },
     {
-      firstName: 'Jane',
-      lastName: 'Doe'
+      name: 'Jane',
+      role: 'user'
     }
   ])
-  console.log(created)
 }
 
 export async function down () {
+  console.log('Migration - down')
   const { User } = await getModels()
   // Write migration here
-  const deleted = await User.deleteMany({ firstName: { $in: ['Jane', 'John'] } }).exec()
-  console.log(deleted)
+  const deleted = await User.deleteMany({ role: 'user' }).exec()
 }

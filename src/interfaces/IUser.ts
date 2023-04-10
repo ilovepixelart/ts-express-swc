@@ -1,6 +1,8 @@
 interface IUser {
-  firstName: string;
-  lastName: string;
+  name: string;
+  role: string;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export default IUser
