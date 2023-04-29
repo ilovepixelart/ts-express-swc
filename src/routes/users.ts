@@ -1,12 +1,14 @@
 import { Router } from 'express'
 
-import type { Request, Response, NextFunction } from 'express'
+import type { Request, Response } from 'express'
+import User from '../models/User'
 
 const router = Router()
 
 /* GET users listing. */
-router.get('/', function (req: Request, res: Response, next: NextFunction) {
-  res.send('respond with a resource')
+router.get('/', async function (req: Request, res: Response) {
+  const users = await User.find().cache('1 minute').exec()
+  res.json(users)
 })
 
 export default router

@@ -1,8 +1,13 @@
-import mongoose from 'mongoose'
+import cache from 'ts-cache-mongoose'
+import mongoose, { ConnectionStates } from 'mongoose'
 
 import optionsMongoose from '../options/mongoose'
 
 import type { MongooseError } from 'mongoose'
+
+cache.init(mongoose, {
+  engine: 'memory'
+})
 
 // In case you using mongoose 6
 // https://mongoosejs.com/docs/guide.html#strictQuery
@@ -33,5 +38,5 @@ export default {
     await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/express', optionsMongoose)
     return mongoose
   },
-  isConnected: () => mongoose.connection.readyState === 1
+  isConnected: () => mongoose.connection.readyState === ConnectionStates.connected
 }
