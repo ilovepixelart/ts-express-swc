@@ -4,6 +4,7 @@
 * [mongoose](https://mongoosejs.com/) - mongodb object modeling
 * [ts-migrate-mongoose](https://github.com/ilovepixelart/ts-migrate-mongoose) - mongoose migration framework
 * [ts-patch-mongoose](https://github.com/ilovepixelart/ts-migrate-mongoose) - mongoose patch history & events
+* [ts-cache-mongoose](https://github.com/ilovepixelart/ts-cache-mongoose) - mongoose cache (in-memory, redis)
 * [typescript 5](https://www.typescriptlang.org/)
 * [swc](https://swc.rs/) for typescript transpilation
 * eslint-standard
