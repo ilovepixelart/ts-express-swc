@@ -38,5 +38,5 @@ export default {
     await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/express', optionsMongoose)
     return mongoose
   },
-  isConnected: () => mongoose.connection.readyState === ConnectionStates.connected
+  isConnected: () => Number(mongoose.connection.readyState) === 1
 }
