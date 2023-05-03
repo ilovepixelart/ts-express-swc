@@ -1,5 +1,5 @@
 import cache from 'ts-cache-mongoose'
-import mongoose, { ConnectionStates } from 'mongoose'
+import mongoose from 'mongoose'
 
 import optionsMongoose from '../options/mongoose'
 

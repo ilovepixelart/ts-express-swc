@@ -9,19 +9,27 @@ export default {
 
     console.info('Running migrations...')
 
-    await migrator.run('down', 'test').then((migrations) => {
-      for (const migration of migrations) {
-        console.info('down:', migration.filename)
-      }
-    })
+    await migrator.run('down', 'test')
+      .then((migrations) => {
+        for (const migration of migrations) {
+          console.info('down:', migration.filename)
+        }
+      })
+      .catch((error) => {
+        console.error(error)
+      })
 
     await migrator.prune()
 
-    await migrator.run('up').then((migrations) => {
-      for (const migration of migrations) {
-        console.info('up:', migration.filename)
-      }
-    })
+    await migrator.run('up')
+      .then((migrations) => {
+        for (const migration of migrations) {
+          console.info('up:', migration.filename)
+        }
+      })
+      .catch((error) => {
+        console.error(error)
+      })
 
     await migrator.close()
   }
