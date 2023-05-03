@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose'
+import { Schema, model, models } from 'mongoose'
 
 import type IUser from '../interfaces/IUser'
 
@@ -26,6 +26,6 @@ UserSchema.plugin(patchHistoryPlugin, {
   omit: ['__v', 'createdAt', 'updatedAt']
 })
 
-const User = model<IUser>('User', UserSchema)
+const User = models.User ?? model<IUser>('User', UserSchema)
 
 export default User
