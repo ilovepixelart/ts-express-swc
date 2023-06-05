@@ -15,7 +15,7 @@
   "dependencies": {
     "cookie-parser": "1.4.6",
     "debug": "4.3.4",
-    "dotenv": "16.0.3",
+    "dotenv": "16.1.4",
     "express": "4.18.2",
     "http-errors": "2.0.0",
     "mongoose": "7.2.2",
