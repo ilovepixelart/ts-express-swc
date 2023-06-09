@@ -21,9 +21,9 @@
     "mongoose": "7.2.2",
     "morgan": "1.10.0",
     "pug": "3.0.2",
-    "ts-cache-mongoose": "1.0.4",
-    "ts-migrate-mongoose": "3.1.6",
-    "ts-patch-mongoose": "2.0.5"
+    "ts-cache-mongoose": "1.0.5",
+    "ts-migrate-mongoose": "3.1.7",
+    "ts-patch-mongoose": "2.0.6"
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "4.1.7",
@@ -39,8 +39,8 @@
     "@types/jest": "29.5.2",
     "@types/morgan": "1.9.4",
     "@types/node": "20.2.5",
-    "@typescript-eslint/eslint-plugin": "5.59.8",
-    "@typescript-eslint/parser": "5.59.8",
+    "@typescript-eslint/eslint-plugin": "5.59.9",
+    "@typescript-eslint/parser": "5.59.9",
     "eslint": "8.42.0",
     "eslint-config-standard": "17.1.0",
     "eslint-plugin-import": "2.27.5",
