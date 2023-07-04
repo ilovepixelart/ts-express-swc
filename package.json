@@ -38,7 +38,7 @@
     "@types/http-errors": "2.0.1",
     "@types/jest": "29.5.2",
     "@types/morgan": "1.9.4",
-    "@types/node": "20.3.3",
+    "@types/node": "18",
     "@typescript-eslint/eslint-plugin": "5.61.0",
     "@typescript-eslint/parser": "5.61.0",
     "eslint": "8.44.0",
