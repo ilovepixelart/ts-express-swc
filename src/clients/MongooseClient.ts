@@ -35,7 +35,7 @@ mongoose.connection.on('reconnect', () => {
 
 export default {
   connect: async () => {
-    await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/express', optionsMongoose)
+    await mongoose.connect(process.env.MONGO_URI ?? 'mongodb://localhost:27017/express', optionsMongoose)
     return mongoose
   },
   isConnected: () => Number(mongoose.connection.readyState) === 1

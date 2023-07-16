@@ -32,7 +32,7 @@ const normalizePort = (val: string) => {
   return false
 }
 
-const port = normalizePort(process.env.PORT || '3000')
+const port = normalizePort(process.env.PORT ?? '3000')
 
 /**
  * Event listener for HTTP server "error" event.
