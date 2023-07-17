@@ -23,7 +23,7 @@
     "pug": "3.0.2",
     "ts-cache-mongoose": "1.0.6",
     "ts-migrate-mongoose": "3.1.9",
-    "ts-patch-mongoose": "2.0.7"
+    "ts-patch-mongoose": "2.0.8"
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "4.1.7",
