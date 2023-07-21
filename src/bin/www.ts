@@ -1,5 +1,3 @@
-/* eslint-disable import/first */
-
 /**
  * Module dependencies.
  */
@@ -96,8 +94,12 @@ const start = async () => {
    */
 
   server.listen(port)
-  server.on('error', onError)
-  server.on('listening', () => onListening(server))
+  server.on('error', (error: HttpError) => {
+    onError(error)
+  })
+  server.on('listening', () => {
+    onListening(server)
+  })
 }
 
 start().catch((err) => {
