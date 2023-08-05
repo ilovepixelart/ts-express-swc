@@ -5,14 +5,9 @@
       "decorators": true,
       "dynamicImport": true
     },
-    "target": "es2022",
+    "target": "es2021",
     "keepClassNames": true,
     "loose": true
-  },
-  "env": {
-    "targets": {
-      "node": 18
-    }
   },
   "module": {
     "type": "commonjs"
