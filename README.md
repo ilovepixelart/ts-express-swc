@@ -8,7 +8,7 @@
 * [typescript 5](https://www.typescriptlang.org/)
 * [swc](https://swc.rs/) for typescript transpilation
 * eslint-standard
-* jest with ts-node that uses swc + in memory mongodb for testing
+* jest that uses swc + in memory mongodb for testing
 
 You can run mongo locally using docker:
 
