@@ -7,12 +7,11 @@
 * [ts-cache-mongoose](https://github.com/ilovepixelart/ts-cache-mongoose) - mongoose cache (in-memory, redis)
 * [typescript 5](https://www.typescriptlang.org/)
 * [swc](https://swc.rs/) for typescript transpilation
-* eslint-standard
 * jest that uses swc + in memory mongodb for testing
 
 You can run mongo locally using docker:
 
 ```bash
-docker pull mongo
-docker run -p 27017:27017 --name mongo -d mongo
+docker compose build
+docker compose up
 ```
