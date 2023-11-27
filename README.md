@@ -9,9 +9,10 @@
 * [swc](https://swc.rs/) for typescript transpilation
 * jest that uses swc + in memory mongodb for testing
 
-You can run mongo locally using docker:
+You can run it using docker:
 
 ```bash
 docker compose build
 docker compose up
 ```
+
