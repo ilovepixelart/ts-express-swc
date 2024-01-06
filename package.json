@@ -22,7 +22,7 @@
     "morgan": "1.10.0",
     "pug": "3.0.2",
     "ts-cache-mongoose": "1.4.3",
-    "ts-migrate-mongoose": "3.5.4",
+    "ts-migrate-mongoose": "3.5.5",
     "ts-patch-mongoose": "2.5.2"
   },
   "devDependencies": {
