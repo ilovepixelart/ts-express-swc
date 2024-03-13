@@ -1,36 +1,42 @@
 {
   "compilerOptions": {
-    "target": "es2022",
+    "target": "ES2021",
     "lib": [
-      "es2022"
+      "ES2021"
     ],
-    "strict": true,
-    "module": "commonjs",
-    "rootDir": "src",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "outDir": "dist",
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "sourceMap": true,
+    "strict": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "checkJs": true,
+    "declaration": true,
+    "declarationMap": true,
     "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "removeComments": true,
+    "isolatedModules": true,
+    "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
-    "noUnusedLocals": true,
+    "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true,
-    "allowUnreachableCode": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "sourceMap": true
   },
   "include": [
     "src"
   ],
   "exclude": [
-    "node_modules",
     "tests",
     "dist",
-    "coverage"
+    "coverage",
+    "node_modules"
   ],
 }
