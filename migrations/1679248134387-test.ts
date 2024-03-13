@@ -1,6 +1,6 @@
 import getModels from '../src/models'
 
-export async function up () {
+export async function up() {
   console.log('Migration - up')
   const { User } = await getModels()
 
@@ -8,7 +8,7 @@ export async function up () {
   await User.findOneAndUpdate({ name: 'John Doe' }, { name: 'John Doe', role: 'admin' }, { upsert: true, new: true })
 }
 
-export async function down () {
+export async function down() {
   console.log('Migration - down')
   const { User } = await getModels()
   // Write migration here

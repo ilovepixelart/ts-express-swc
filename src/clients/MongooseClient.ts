@@ -3,10 +3,10 @@ import mongoose from 'mongoose'
 
 import optionsMongoose from '../options/mongoose'
 
-import type { MongooseError } from 'mongoose'
+import type { Mongoose, MongooseError } from 'mongoose'
 
 cache.init(mongoose, {
-  engine: 'memory'
+  engine: 'memory',
 })
 
 // In case you using mongoose 6
@@ -34,9 +34,9 @@ mongoose.connection.on('reconnect', () => {
 })
 
 export default {
-  connect: async () => {
+  connect: async (): Promise<Mongoose> => {
     await mongoose.connect(process.env.MONGO_URI ?? 'mongodb://localhost:27017/express', optionsMongoose)
     return mongoose
   },
-  isConnected: () => Number(mongoose.connection.readyState) === 1
+  isConnected: (): boolean => Number(mongoose.connection.readyState) === 1,
 }

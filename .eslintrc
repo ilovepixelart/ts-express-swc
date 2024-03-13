@@ -2,24 +2,20 @@
   "root": true,
   "env": {
     "commonjs": true,
-    "es2022": true,
+    "es2021": true,
     "node": true,
     "jest": true
   },
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint",
-    "jest",
-    "jest-formatting",
     "sonarjs"
   ],
   "extends": [
     "eslint:recommended",
+    "plugin:sonarjs/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/strict",
-    "plugin:@typescript-eslint/stylistic",
-    "plugin:sonarjs/recommended"
+    "plugin:@stylistic/recommended-extends"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -30,42 +26,40 @@
     "sourceType": "module"
   },
   "rules": {
-    "comma-dangle": [
+    "@stylistic/arrow-parens": ["error", "always"],
+    "@stylistic/brace-style": ["error", "1tbs"],
+    "@stylistic/member-delimiter-style": [
       "error",
-      "never"
+      {
+        "multiline": {
+          "delimiter": "none",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "comma",
+          "requireLast": false
+        }
+      }
     ],
-    "no-nested-ternary": "error",
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-indexed-object-style": "error",
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/method-signature-style": "error",
-    "@typescript-eslint/no-unused-vars": "off",
-    "indent": [
-      "error",
-      2
-    ],
-    "arrow-parens": [
-      "error"
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "never"
-    ]
+    "@typescript-eslint/no-unused-vars": "off"
   },
   "overrides": [
     {
       "files": [
         "tests/**/*.test.ts"
       ],
+      "plugins": [
+        "jest",
+        "jest-formatting"
+      ],
       "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/strict",
+        "plugin:@typescript-eslint/stylistic",
         "plugin:jest/style",
         "plugin:jest/recommended",
         "plugin:jest-formatting/recommended"
@@ -86,10 +80,14 @@
         "plugin:@typescript-eslint/stylistic-type-checked"
       ],
       "rules": {
-        "@typescript-eslint/no-dynamic-delete": "off",
-        "@typescript-eslint/no-unnecessary-condition": "off",
         "@typescript-eslint/consistent-type-exports": "error",
-        "@typescript-eslint/prefer-nullish-coalescing": "off",
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "@typescript-eslint/explicit-module-boundary-types": "error",
+        "@typescript-eslint/member-ordering": "error",
+        "@typescript-eslint/typedef": "error",
+        "@typescript-eslint/prefer-enum-initializers": "error",
+        "@typescript-eslint/require-array-sort-compare": "error",
+        "@typescript-eslint/no-redundant-type-constituents": "error",
         "@typescript-eslint/no-misused-promises": [
           "error",
           {

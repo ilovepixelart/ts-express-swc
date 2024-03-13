@@ -1,6 +1,5 @@
-import { Schema, model, models } from 'mongoose'
+import { Schema, model } from 'mongoose'
 
-import type { Model } from 'mongoose'
 import type IUser from '../interfaces/IUser'
 
 import { patchHistoryPlugin } from 'ts-patch-mongoose'
@@ -10,23 +9,23 @@ const UserSchema = new Schema<IUser>({
   name: {
     type: String,
     required: true,
-    index: true
+    index: true,
   },
   role: {
     type: String,
     required: true,
     enum: ['admin', 'manager', 'user'],
-    index: true
-  }
+    index: true,
+  },
 }, { timestamps: true })
 
 UserSchema.plugin(patchHistoryPlugin, {
   eventCreated: USER_CREATED,
   eventUpdated: USER_UPDATED,
   eventDeleted: USER_DELETED,
-  omit: ['__v', 'createdAt', 'updatedAt']
+  omit: ['__v', 'createdAt', 'updatedAt'],
 })
 
-const User = models.User as Model<IUser> ?? model<IUser>('User', UserSchema)
+const User = model<IUser>('User', UserSchema)
 
 export default User

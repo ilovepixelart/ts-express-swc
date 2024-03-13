@@ -7,8 +7,8 @@
     "build": "swc src -d dist",
     "build:ts": "tsc --project tsconfig.json",
     "dev": "nodemon --ext ts --exec node --inspect -r @swc/register src/bin/www.ts",
-    "lint": "yarn eslint ./src --fix . --ext .js,.ts",
-    "lint:fix": "yarn eslint ./src --fix . --ext .js,.ts --fix",
+    "lint": "eslint ./src --fix . --ext .js,.ts",
+    "lint:fix": "eslint ./src --fix . --ext .js,.ts --fix",
     "test": "jest --config jest.config.ts --detectOpenHandles --coverage",
     "test:open": "npm run test && open-cli coverage/lcov-report/index.html"
   },
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "4.2.0",
+    "@stylistic/eslint-plugin": "1.6.3",
     "@swc/cli": "0.3.10",
     "@swc/core": "1.4.6",
     "@swc/helpers": "0.5.6",

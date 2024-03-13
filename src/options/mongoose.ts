@@ -1,3 +1,3 @@
 export default {
-  autoIndex: true
+  autoIndex: true,
 }

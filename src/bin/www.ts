@@ -23,7 +23,7 @@ const log = debug('ts-express-swc:server')
  * Normalize a port into a number, string, or false.
  */
 
-const normalizePort = (val: string) => {
+const normalizePort = (val: string): boolean | number | string => {
   const port = parseInt(val, 10)
   if (isNaN(port)) return val // named pipe
   if (port >= 0) return port // port number
@@ -36,7 +36,7 @@ const port = normalizePort(process.env.PORT ?? '3000')
  * Event listener for HTTP server "error" event.
  */
 
-const onError = (error: HttpError) => {
+const onError = (error: HttpError): void => {
   if (error.syscall !== 'listen') {
     throw error
   }
@@ -61,7 +61,7 @@ const onError = (error: HttpError) => {
  * Event listener for HTTP server "listening" event.
  */
 
-const onListening = (server: Server) => {
+const onListening = (server: Server): void => {
   let bind = 'unknown'
   const addr = server.address()
   if (typeof addr === 'string') {
@@ -73,7 +73,7 @@ const onListening = (server: Server) => {
   log(`Listening on ${bind}`)
 }
 
-const start = async () => {
+const start = async (): Promise<void> => {
   await MongooseClient.connect()
   await MigrationClient.connect()
 

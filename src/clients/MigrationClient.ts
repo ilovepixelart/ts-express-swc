@@ -1,10 +1,10 @@
 import Migrator from 'ts-migrate-mongoose'
 
 export default {
-  connect: async () => {
+  connect: async (): Promise<void> => {
     const migrator = await Migrator.connect({
       uri: process.env.MONGO_URI ?? 'mongodb://localhost:27017/express',
-      autosync: true
+      autosync: true,
     })
 
     console.info('Running migrations...')
@@ -32,5 +32,5 @@ export default {
       })
 
     await migrator.close()
-  }
+  },
 }

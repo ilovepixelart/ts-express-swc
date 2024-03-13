@@ -3,6 +3,7 @@
     "autosync",
     "linebreak",
     "parens",
+    "singleline",
     "sonarjs"
   ]
 }
