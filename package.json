@@ -23,7 +23,8 @@
     "pug": "3.0.2",
     "ts-cache-mongoose": "1.5.0",
     "ts-migrate-mongoose": "3.6.4",
-    "ts-patch-mongoose": "2.6.0"
+    "ts-patch-mongoose": "2.6.0",
+    "tslib": "2.6.2"
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "4.2.0",
@@ -51,8 +52,5 @@
     "nodemon": "3.1.0",
     "open-cli": "8.0.0",
     "typescript": "5.4.3"
-  },
-  "resolutions": {
-    "tslib": "2.6.2"
   }
 }
