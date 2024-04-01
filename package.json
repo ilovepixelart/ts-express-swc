@@ -18,18 +18,18 @@
     "dotenv": "16.4.5",
     "express": "4.19.2",
     "http-errors": "2.0.0",
-    "mongoose": "8.2.3",
+    "mongoose": "8.2.4",
     "morgan": "1.10.0",
     "pug": "3.0.2",
-    "ts-cache-mongoose": "1.4.6",
-    "ts-migrate-mongoose": "3.6.3",
-    "ts-patch-mongoose": "2.5.6"
+    "ts-cache-mongoose": "1.5.0",
+    "ts-migrate-mongoose": "3.6.4",
+    "ts-patch-mongoose": "2.6.0"
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "4.2.0",
     "@stylistic/eslint-plugin": "1.7.0",
-    "@swc/cli": "0.3.10",
-    "@swc/core": "1.4.8",
+    "@swc/cli": "0.3.12",
+    "@swc/core": "1.4.11",
     "@swc/helpers": "0.5.8",
     "@swc/jest": "0.2.36",
     "@swc/register": "0.1.10",
@@ -41,7 +41,7 @@
     "@types/morgan": "1.9.9",
     "@types/node": "20",
     "@typescript-eslint/eslint-plugin": "7.4.0",
-    "@typescript-eslint/parser": "7.2.0",
+    "@typescript-eslint/parser": "7.4.0",
     "eslint": "8.57.0",
     "eslint-plugin-jest": "27.9.0",
     "eslint-plugin-jest-formatting": "3.1.0",
@@ -50,6 +50,9 @@
     "merge": "2.1.1",
     "nodemon": "3.1.0",
     "open-cli": "8.0.0",
-    "typescript": "5.3.3"
+    "typescript": "5.4.3"
+  },
+  "resolutions": {
+    "tslib": "2.6.2"
   }
 }
