@@ -13,8 +13,8 @@ cache.init(mongoose, {
 // https://mongoosejs.com/docs/guide.html#strictQuery
 mongoose.set('strictQuery', false)
 
-mongoose.connection.on('error', (err: MongooseError) => {
-  console.error(err.message)
+mongoose.connection.on('error', (error: MongooseError) => {
+  console.error(error.message)
 })
 
 mongoose.connection.on('connecting', () => {

@@ -15,7 +15,7 @@ export default {
           console.info('down:', migration.filename)
         }
       })
-      .catch((error) => {
+      .catch((error: unknown) => {
         console.error(error)
       })
 
@@ -27,7 +27,7 @@ export default {
           console.info('up:', migration.filename)
         }
       })
-      .catch((error) => {
+      .catch((error: unknown) => {
         console.error(error)
       })
 

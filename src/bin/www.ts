@@ -43,7 +43,7 @@ const onError = (error: HttpError): void => {
 
   const bind = typeof port === 'string'
     ? `Pipe ${port}`
-    : `Port ${port as number}`
+    : `Port ${port.toString()}`
 
   // handle specific listen errors with friendly messages
   if (error.code === 'EACCES') {
@@ -67,7 +67,7 @@ const onListening = (server: Server): void => {
   if (typeof addr === 'string') {
     bind = `pipe ${addr}`
   } else if (addr) {
-    bind = `port ${addr.port}`
+    bind = `port ${addr.port.toString()}`
   }
 
   log(`Listening on ${bind}`)
@@ -102,7 +102,7 @@ const start = async (): Promise<void> => {
   })
 }
 
-start().catch((err) => {
-  log(err)
+start().catch((error: unknown) => {
+  log(error)
   process.exit(1)
 })
