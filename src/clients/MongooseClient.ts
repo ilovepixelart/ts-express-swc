@@ -5,8 +5,11 @@ import optionsMongoose from '../options/mongoose'
 
 import type { Mongoose, MongooseError } from 'mongoose'
 
+// Run project, open localhost:3000/users to see the cache in action, by refreshing the page
 cache.init(mongoose, {
   engine: 'memory',
+  // This is for demo purposes, you should not use this in production
+  debug: true,
 })
 
 // In case you using mongoose 6
