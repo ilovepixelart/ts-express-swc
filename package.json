@@ -24,7 +24,7 @@
     "ts-cache-mongoose": "1.6.4",
     "ts-migrate-mongoose": "3.8.3",
     "ts-patch-mongoose": "2.6.4",
-    "tslib": "2.6.3"
+    "tslib": "2.7.0"
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "4.3.2",
