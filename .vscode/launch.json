@@ -8,9 +8,7 @@
       "name": "Attach to nodemon",
       "port": 9229,
       "request": "attach",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
+      "skipFiles": ["<node_internals>/**"],
       "type": "node"
     },
     {
@@ -19,12 +17,8 @@
       "request": "launch",
       "preLaunchTask": "npm: build",
       "program": "${workspaceFolder}/src/bin/www.ts",
-      "outFiles": [
-        "${workspaceFolder}/dist/**/*.js",
-      ],
-      "resolveSourceMapLocations": [
-        "${workspaceFolder}/dist/**/*.js.map",
-      ],
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "resolveSourceMapLocations": ["${workspaceFolder}/dist/**/*.js.map"],
       "env": {
         // To debug mongo queries add mquery
         "DEBUG": "http,express",
@@ -32,6 +26,6 @@
       },
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
-    },
+    }
   ]
 }

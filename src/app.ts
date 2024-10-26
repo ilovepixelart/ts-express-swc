@@ -1,14 +1,14 @@
-import createError from 'http-errors'
-import express from 'express'
-import path from 'path'
+import path from 'node:path'
 import cookieParser from 'cookie-parser'
+import express from 'express'
+import createError from 'http-errors'
 import logger from 'morgan'
 
 import indexRouter from './routes/index'
 import usersRouter from './routes/users'
 
+import type { NextFunction, Request, Response } from 'express'
 import type { HttpError } from 'http-errors'
-import type { Request, Response, NextFunction } from 'express'
 
 const app = express()
 
@@ -26,12 +26,12 @@ app.use('/', indexRouter)
 app.use('/users', usersRouter)
 
 // catch 404 and forward to error handler
-app.use(function (_req: Request, _res: Response, next: NextFunction) {
+app.use((_req: Request, _res: Response, next: NextFunction) => {
   next(createError(404))
 })
 
 // error handler
-app.use(function (error: HttpError, req: Request, res: Response) {
+app.use((error: HttpError, req: Request, res: Response) => {
   // set locals, only providing error in development
   res.locals.message = error.message
   res.locals.error = req.app.get('env') === 'development' ? error : {}

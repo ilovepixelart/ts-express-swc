@@ -1,7 +1,7 @@
 import MongooseClient from '../clients/MongooseClient'
 import User from './User'
 
-import type { Mongoose, Model } from 'mongoose'
+import type { Model, Mongoose } from 'mongoose'
 import type IUser from '../interfaces/IUser'
 
 const getModels = async (): Promise<{

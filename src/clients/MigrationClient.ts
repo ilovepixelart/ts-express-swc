@@ -9,7 +9,8 @@ export default {
 
     console.info('Running migrations...')
 
-    await migrator.run('down', 'test')
+    await migrator
+      .run('down', 'test')
       .then((migrations) => {
         for (const migration of migrations) {
           console.info('down:', migration.filename)
@@ -21,7 +22,8 @@ export default {
 
     await migrator.prune()
 
-    await migrator.run('up')
+    await migrator
+      .run('up')
       .then((migrations) => {
         for (const migration of migrations) {
           console.info('up:', migration.filename)

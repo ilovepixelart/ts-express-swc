@@ -1,5 +1,5 @@
-import cache from 'ts-cache-mongoose'
 import mongoose from 'mongoose'
+import cache from 'ts-cache-mongoose'
 
 import optionsMongoose from '../options/mongoose'
 

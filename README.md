@@ -7,6 +7,7 @@
 * [ts-cache-mongoose](https://github.com/ilovepixelart/ts-cache-mongoose) - mongoose cache (in-memory, redis)
 * [typescript 5](https://www.typescriptlang.org/)
 * [swc](https://swc.rs/) for typescript transpilation
+* [biome](https://biomejs.dev/) - one toolchain for your web project
 * jest that uses swc + in memory mongodb for testing
 
 You can run it using docker:
@@ -15,4 +16,3 @@ You can run it using docker:
 docker compose build
 docker compose up
 ```
-

@@ -5,14 +5,14 @@
 import dotenv from 'dotenv'
 dotenv.config()
 
-import app from '../app'
-import http from 'http'
+import http from 'node:http'
 import debug from 'debug'
+import app from '../app'
 
-import MongooseClient from '../clients/MongooseClient'
 import MigrationClient from '../clients/MigrationClient'
+import MongooseClient from '../clients/MongooseClient'
 
-import type { Server } from 'http'
+import type { Server } from 'node:http'
 import type { HttpError } from 'http-errors'
 
 import '../handlers/UserHandler'
@@ -24,8 +24,8 @@ const log = debug('ts-express-swc:server')
  */
 
 const normalizePort = (val: string): boolean | number | string => {
-  const port = parseInt(val, 10)
-  if (isNaN(port)) return val // named pipe
+  const port = Number.parseInt(val, 10)
+  if (Number.isNaN(port)) return val // named pipe
   if (port >= 0) return port // port number
   return false
 }
@@ -41,9 +41,7 @@ const onError = (error: HttpError): void => {
     throw error
   }
 
-  const bind = typeof port === 'string'
-    ? `Pipe ${port}`
-    : `Port ${port.toString()}`
+  const bind = typeof port === 'string' ? `Pipe ${port}` : `Port ${port.toString()}`
 
   // handle specific listen errors with friendly messages
   if (error.code === 'EACCES') {

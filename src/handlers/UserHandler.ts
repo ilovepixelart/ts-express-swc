@@ -1,5 +1,5 @@
 import { patchEventEmitter } from 'ts-patch-mongoose'
-import { USER_CREATED, USER_UPDATED, USER_DELETED } from '../constants/events'
+import { USER_CREATED, USER_DELETED, USER_UPDATED } from '../constants/events'
 
 patchEventEmitter.on(USER_CREATED, ({ doc }) => {
   try {
