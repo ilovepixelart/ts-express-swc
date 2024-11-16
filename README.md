@@ -1,6 +1,6 @@
-# Express.js + TypeScript 5 + SWC
+# Express.js + Mongoose + TypeScript 5 + SWC
 
-* [express](https://expressjs.com/) - fast, unopinionated, minimalist web framework for node
+* [express 5](https://expressjs.com/) - fast, unopinionated, minimalist web framework for node
 * [mongoose](https://mongoosejs.com/) - mongodb object modeling
 * [ts-migrate-mongoose](https://github.com/ilovepixelart/ts-migrate-mongoose) - mongoose migration framework
 * [ts-patch-mongoose](https://github.com/ilovepixelart/ts-migrate-mongoose) - mongoose patch history & events
@@ -8,7 +8,7 @@
 * [typescript 5](https://www.typescriptlang.org/)
 * [swc](https://swc.rs/) - for typescript transpilation
 * [biome](https://biomejs.dev/) - one toolchain for your web project
-* jest that uses swc + in memory mongodb for testing
+* [vitest](https://vitest.dev/)vitest with mongodb-memory-server for testing
 
 You can run it using docker:
 
