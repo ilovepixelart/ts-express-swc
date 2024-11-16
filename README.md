@@ -8,7 +8,24 @@
 * [typescript 5](https://www.typescriptlang.org/)
 * [swc](https://swc.rs/) - for typescript transpilation
 * [biome](https://biomejs.dev/) - one toolchain for your web project
-* [vitest](https://vitest.dev/)vitest with mongodb-memory-server for testing
+* [vitest](https://vitest.dev/) - vitest with mongodb-memory-server for testing
+
+Commands:
+
+```bash
+npm i
+
+npm run dev # developer mode
+
+npm run build # build using swc
+npm run start # production mode
+
+npm run biome # lint & format check
+npm run biome:fix # lint & format auto fix
+
+npm run test # to run all tests
+npm run test:open # to run coverage & open istanbul in the browser
+```
 
 You can run it using docker:
 
