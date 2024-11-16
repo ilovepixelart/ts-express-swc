@@ -10,7 +10,7 @@
     "biome": "npx @biomejs/biome check",
     "biome:fix": "npx @biomejs/biome check --write .",
     "test": "vitest",
-    "test:open": "vitest run --coverage"
+    "test:open": "vitest run --coverage && open-cli coverage/index.html"
   },
   "dependencies": {
     "@biomejs/biome": "1.9.4",
@@ -35,7 +35,6 @@
     "@types/morgan": "1.9.9",
     "@types/node": "22",
     "@vitest/coverage-v8": "2.1.5",
-    "merge": "2.1.1",
     "mongodb-memory-server": "10.1.2",
     "nodemon": "3.1.7",
     "open-cli": "8.0.0",
