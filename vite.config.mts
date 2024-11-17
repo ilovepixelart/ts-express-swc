@@ -6,7 +6,7 @@ export default defineConfig({
     name: 'node',
     environment: 'node',
     coverage: {
-      reporter: ['html', 'lcov'],
+      reporter: ['lcov'],
     }
   }
 })

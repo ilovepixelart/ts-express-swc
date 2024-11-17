@@ -10,7 +10,7 @@
     "biome": "npx @biomejs/biome check",
     "biome:fix": "npx @biomejs/biome check --write .",
     "test": "vitest",
-    "test:open": "vitest run --coverage && open-cli coverage/index.html"
+    "test:open": "vitest run --coverage && open-cli coverage/lcov-report/index.html"
   },
   "dependencies": {
     "@biomejs/biome": "1.9.4",
