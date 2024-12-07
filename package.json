@@ -15,31 +15,31 @@
   "dependencies": {
     "@biomejs/biome": "1.9.4",
     "cookie-parser": "1.4.7",
-    "debug": "4.3.7",
-    "dotenv": "16.4.5",
+    "debug": "4.4.0",
+    "dotenv": "16.4.7",
     "express": "5.0.1",
     "http-errors": "2.0.0",
-    "mongoose": "8.8.3",
+    "mongoose": "8.8.4",
     "morgan": "1.10.0",
     "pug": "3.0.3",
-    "ts-cache-mongoose": "1.6.6",
-    "ts-migrate-mongoose": "3.8.5",
-    "ts-patch-mongoose": "2.6.6"
+    "ts-cache-mongoose": "1.6.7",
+    "ts-migrate-mongoose": "3.8.6",
+    "ts-patch-mongoose": "2.6.7"
   },
   "devDependencies": {
     "@swc-node/register": "1.10.9",
-    "@swc/cli": "0.5.1",
+    "@swc/cli": "0.5.2",
     "@types/cookie-parser": "1.4.8",
     "@types/debug": "4.1.12",
     "@types/express": "5.0.0",
     "@types/http-errors": "2.0.4",
     "@types/morgan": "1.9.9",
     "@types/node": "22",
-    "@vitest/coverage-v8": "2.1.5",
+    "@vitest/coverage-v8": "2.1.8",
     "mongodb-memory-server": "10.1.2",
     "nodemon": "3.1.7",
     "open-cli": "8.0.0",
     "typescript": "5.7.2",
-    "vitest": "2.1.5"
+    "vitest": "2.1.8"
   }
 }
