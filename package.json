@@ -24,7 +24,7 @@
     "pug": "3.0.3",
     "ts-cache-mongoose": "1.6.7",
     "ts-migrate-mongoose": "3.8.6",
-    "ts-patch-mongoose": "2.6.7"
+    "ts-patch-mongoose": "2.6.8"
   },
   "devDependencies": {
     "@swc-node/register": "1.10.9",
