@@ -8,4 +8,15 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "monthly"
+      interval: "weekly"
+      day: "monday"
+    ignore:
+      - dependency-name: "sort-keys"
+    commit-message:
+      prefix: "Update dependencies"
+    pull-request-branch-name:
+      separator: "-"
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
