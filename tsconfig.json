@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES2021",
-    "lib": ["ES2021"],
-    "module": "CommonJS",
-    "moduleResolution": "Node",
+    "lib": ["ESNext"],
+    "types": ["node"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "target": "ESNext",
     "outDir": "dist",
     "strict": true,
     "allowSyntheticDefaultImports": true,

@@ -1,12 +1,12 @@
-import { Schema, model, models } from 'mongoose'
+import mongoose from 'mongoose'
 
-import { patchHistoryPlugin } from 'ts-patch-mongoose'
-import { USER_CREATED, USER_DELETED, USER_UPDATED } from '../constants/events'
+// import { patchHistoryPlugin } from 'ts-patch-mongoose'
+// import { USER_CREATED, USER_DELETED, USER_UPDATED } from '../constants/events.js'
 
 import type { Model } from 'mongoose'
-import type IUser from '../interfaces/IUser'
+import type IUser from '../interfaces/IUser.js'
 
-const UserSchema = new Schema<IUser>(
+const UserSchema = new mongoose.Schema<IUser>(
   {
     name: {
       type: String,
@@ -23,13 +23,13 @@ const UserSchema = new Schema<IUser>(
   { timestamps: true },
 )
 
-UserSchema.plugin(patchHistoryPlugin, {
-  eventCreated: USER_CREATED,
-  eventUpdated: USER_UPDATED,
-  eventDeleted: USER_DELETED,
-  omit: ['__v', 'createdAt', 'updatedAt'],
-})
+// UserSchema.plugin(patchHistoryPlugin, {
+//   eventCreated: USER_CREATED,
+//   eventUpdated: USER_UPDATED,
+//   eventDeleted: USER_DELETED,
+//   omit: ['__v', 'createdAt', 'updatedAt'],
+// })
 
-const User = (models.User as Model<IUser> | undefined) ?? model<IUser>('User', UserSchema)
+const User = (mongoose.models.User as Model<IUser> | undefined) ?? mongoose.model<IUser>('User', UserSchema)
 
 export default User
