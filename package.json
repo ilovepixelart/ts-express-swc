@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@biomejs/biome": "1.9.4",
+    "@swc/helpers": "0.5.15",
     "cookie-parser": "1.4.7",
     "debug": "4.4.0",
     "dotenv": "16.4.7",
