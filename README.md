@@ -6,7 +6,7 @@
 * [ts-patch-mongoose](https://github.com/ilovepixelart/ts-migrate-mongoose) - mongoose patch history & events
 * [ts-cache-mongoose](https://github.com/ilovepixelart/ts-cache-mongoose) - mongoose cache (in-memory, redis)
 * [typescript 5](https://www.typescriptlang.org/)
-* [tsx](https://https://tsx.is/) - for typescript transpilation
+* [tsx](https://tsx.is/) - for typescript transpilation
 * [biome](https://biomejs.dev/) - one toolchain for your web project
 * [vitest](https://vitest.dev/) - vitest with mongodb-memory-server for testing
 
