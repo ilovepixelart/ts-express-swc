@@ -1,4 +1,4 @@
-import Migrator from 'ts-migrate-mongoose'
+import { Migrator } from 'ts-migrate-mongoose'
 
 export default {
   connect: async (): Promise<void> => {
