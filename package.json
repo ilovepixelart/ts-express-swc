@@ -3,10 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "migrate": "cross-env SWC_NODE_PROJECT=./tsconfig.app.json npx migrate",
-    "start": "cross-env SWC_NODE_PROJECT=./tsconfig.app.json node ./dist/bin/www.js",
-    "build": "tsc --project tsconfig.app.json",
-    "dev": "cross-env SWC_NODE_PROJECT=./tsconfig.app.json nodemon --ext ts --exec node --inspect -r @swc-node/register src/bin/www.ts",
+    "start": "node ./dist/bin/www.js",
+    "build": "tsc",
+    "dev": "nodemon --ext ts --exec node --inspect -r @swc-node/register src/bin/www.ts",
     "biome": "npx @biomejs/biome check",
     "biome:fix": "npx @biomejs/biome check --write .",
     "test": "vitest run --coverage",
