@@ -1,11 +1,33 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "include": ["src", "migrations"],
+  "compilerOptions": {
+    "target": "ES2021",
+    "lib": ["ES2021"],
+    "types": ["node"],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "checkJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "sourceMap": true
+  },
 }
