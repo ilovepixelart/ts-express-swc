@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@biomejs/biome": "1.9.4",
-    "@swc/helpers": "0.5.15",
     "cookie-parser": "1.4.7",
     "debug": "4.4.0",
     "dotenv": "16.4.7",
@@ -30,6 +29,7 @@
   "devDependencies": {
     "@swc-node/register": "1.10.9",
     "@swc/cli": "0.6.0",
+    "@swc/helpers": "^0.5.15",
     "@types/cookie-parser": "1.4.8",
     "@types/debug": "4.1.12",
     "@types/express": "5.0.0",
