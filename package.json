@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./dist/bin/www.js",
     "build": "tsc --project tsconfig.json",
-    "dev": "nodemon --ext ts --exec node --inspect -r @swc-node/register src/bin/www.ts",
+    "dev": "nodemon --ext ts --exec tsx --inspect src/bin/www.ts",
     "biome": "npx @biomejs/biome check",
     "biome:fix": "npx @biomejs/biome check --write .",
     "test": "vitest run --coverage",
@@ -27,8 +27,6 @@
     "ts-patch-mongoose": "2.8.0"
   },
   "devDependencies": {
-    "@swc-node/register": "1.10.9",
-    "@swc/cli": "0.6.0",
     "@types/cookie-parser": "1.4.8",
     "@types/debug": "4.1.12",
     "@types/express": "5.0.0",
@@ -39,6 +37,7 @@
     "mongodb-memory-server": "10.1.3",
     "nodemon": "3.1.9",
     "open-cli": "8.0.0",
+    "tsx": "^4.19.3",
     "typescript": "5.7.3",
     "vitest": "3.0.5"
   }
