@@ -1,4 +1,4 @@
-import getModels from '../src/models'
+import getModels from '@/models'
 
 export async function up() {
   console.log('Migration - up')
