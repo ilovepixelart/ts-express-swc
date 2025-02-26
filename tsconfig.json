@@ -1,5 +1,5 @@
 {
-  "include": ["src", "migrations"],
+  "include": ["src"],
   "compilerOptions": {
     "target": "ES2021",
     "lib": ["ES2021"],
