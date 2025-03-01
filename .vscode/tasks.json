@@ -7,7 +7,7 @@
       "group": "build",
       "problemMatcher": [],
       "label": "npm: build",
-      "detail": "swc src -d dist"
+      "detail": "tsc"
     }
   ]
 }

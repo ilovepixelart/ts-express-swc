@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Attach to nodemon",
+      "name": "Attach to local",
       "port": 9229,
       "request": "attach",
       "skipFiles": ["<node_internals>/**"],

@@ -17,7 +17,7 @@ import type { HttpError } from 'http-errors'
 
 import '../handlers/UserHandler.js'
 
-const log = debug('ts-express-swc:server')
+const log = debug('ts-express-tsx:server')
 
 /**
  * Normalize a port into a number, string, or false.
