@@ -2,8 +2,6 @@ import { MongoMemoryServer } from 'mongodb-memory-server'
 import mongoose from 'mongoose'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 
-import type { Connection } from 'mongoose'
-
 describe('mongoose', async () => {
   const mongod = await MongoMemoryServer.create()
 
